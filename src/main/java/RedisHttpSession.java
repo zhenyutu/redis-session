@@ -28,6 +28,8 @@ public class RedisHttpSession implements HttpSession{
         this.lastAccessdTime = this.creationTime;
         this.attribute = new HashMap<String,Object>();
 
+        this.manager = RedisSessionManager.getInstance();
+
         writeCookie();
     }
 

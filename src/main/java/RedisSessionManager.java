@@ -19,18 +19,29 @@ public class RedisSessionManager {
         RedisSessionManager.configuration = configuration;
     }
 
-    public RedisSessionManager getInstance(){
-        return new RedisSessionManager(RedisSessionManager.configuration);
+    public static RedisSessionManager getInstance(){
+        return SingletonHolder.INSTANCE;
     }
 
-    public RedisHttpSession loadDBSession(String sessionId){
+    public RedisHttpSession getSession(String sessionId){
         String sessionStr = jedisUtil.get(sessionId);
-        RedisHttpSession session = JSON.parseObject(sessionStr,RedisHttpSession.class);
-        return session;
+        return JSON.parseObject(sessionStr,RedisHttpSession.class);
     }
 
     public void deletePhysically(String id) {
          jedisUtil.deletePhysically(id);
+    }
+
+    private static final class SingletonHolder {
+        private static final RedisSessionManager INSTANCE = init();
+
+        private static RedisSessionManager init() {
+            return new RedisSessionManager(RedisSessionManager.configuration);
+        }
+
+        private SingletonHolder() {
+        }
+
     }
 
 }
