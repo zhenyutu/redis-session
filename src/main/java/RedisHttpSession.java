@@ -55,7 +55,7 @@ public class RedisHttpSession implements HttpSession{
 
 
     public ServletContext getServletContext() {
-        return null;
+        return request.getSession().getServletContext();
     }
 
     public HttpSessionContext getSessionContext() {
