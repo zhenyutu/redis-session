@@ -12,10 +12,10 @@ import java.util.Set;
  * Created by tuzhenyu on 17-9-28.
  * @author tuzhenyu
  */
-public class JedisService {
+public class JedisUtil {
     private JedisPool pool;
 
-    public JedisService(){
+    public JedisUtil(){
         pool = new JedisPool("redis://localhost:6379/2");
     }
 

@@ -1,10 +1,9 @@
 import redis.RedisSessionManager;
 
-import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.*;
 import javax.servlet.ServletContext;
-import javax.servlet.http.HttpSession;
-import javax.servlet.http.HttpSessionContext;
 import java.util.Enumeration;
+import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -14,20 +13,24 @@ import java.util.Map;
 public class RedisHttpSession implements HttpSession{
     private String id;
     private HttpServletRequest request;
+    private HttpServletResponse response;
+
     private long creationTime;
     private long lastAccessdTime;
     private int maxInactiveInterval;
 
     private RedisSessionManager manager;
-    private Map<String,Object> dbSession;
+    private Map<String,Object> attribute;
 
-    public RedisHttpSession(HttpServletRequest request, String id){
+    public RedisHttpSession(HttpServletRequest request, HttpServletResponse response, String id){
         this.id = id;
         this.request = request;
+        this.response = response;
         this.creationTime = System.currentTimeMillis();
         this.lastAccessdTime = this.creationTime;
+        this.attribute = new HashMap<String,Object>();
 
-        dbSession = manager.loadDBSession(id);
+        writeCookie();
     }
 
     public long getCreationTime() {
@@ -98,5 +101,11 @@ public class RedisHttpSession implements HttpSession{
 
     public boolean isNew() {
         return false;
+    }
+
+    private void writeCookie(){
+        String id = getId();
+        Cookie cookie = new Cookie("sessionId",id);
+        response.addCookie(cookie);
     }
 }

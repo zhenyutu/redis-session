@@ -10,9 +10,10 @@ import java.util.Map;
  */
 public class RedisSessionManager {
     private static Configuration configuration;
+    private JedisUtil jedisUtil;
 
     public RedisSessionManager(Configuration configuration){
-
+        jedisUtil = new JedisUtil();
     }
 
     public static void config(Configuration configuration){
@@ -24,6 +25,7 @@ public class RedisSessionManager {
     }
 
     public Map<String,Object> loadDBSession(String sessionId){
+        String session = jedisUtil.get(sessionId);
         return  new HashMap<String,Object>();
     }
 

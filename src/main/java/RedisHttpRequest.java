@@ -2,6 +2,7 @@ import sessionIDGenerator.SessionIdGenerator;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletRequestWrapper;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 /**
@@ -10,12 +11,14 @@ import javax.servlet.http.HttpSession;
  */
 public class RedisHttpRequest extends HttpServletRequestWrapper{
     private final HttpServletRequest request;
+    private final HttpServletResponse response;
     private RedisHttpSession session;
     private SessionIdGenerator generator = new SessionIdGenerator();
 
-    public RedisHttpRequest(HttpServletRequest request) {
+    public RedisHttpRequest(HttpServletRequest request, HttpServletResponse response) {
         super(request);
         this.request = request;
+        this.response = response;
     }
 
     @Override
@@ -30,7 +33,8 @@ public class RedisHttpRequest extends HttpServletRequestWrapper{
 
     private HttpSession doGetSession(boolean create){
         if (session==null){
-            RedisHttpSession redisSession = new RedisHttpSession(request,generator.generateID(request));
+            RedisHttpSession redisSession = new RedisHttpSession(request,response,generator.generateID(request));
+            this.session = redisSession;
         }
         return session;
     }
