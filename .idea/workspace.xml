@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e71ad6bf-c27f-43e1-a27a-4183b5daa7a7" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/redis/JedisService.java" afterPath="$PROJECT_DIR$/src/main/java/redis/JedisUtil.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/redis/RedisSessionManager.java" afterPath="$PROJECT_DIR$/src/main/java/RedisSessionManager.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/RedisHttpRequest.java" afterPath="$PROJECT_DIR$/src/main/java/RedisHttpRequest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/RedisHttpSession.java" afterPath="$PROJECT_DIR$/src/main/java/RedisHttpSession.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/redis/RedisSessionManager.java" afterPath="$PROJECT_DIR$/src/main/java/redis/RedisSessionManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/RedisSessionFilter.java" afterPath="$PROJECT_DIR$/src/main/java/RedisSessionFilter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/redis/JedisUtil.java" afterPath="$PROJECT_DIR$/src/main/java/redis/JedisUtil.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -26,13 +26,18 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="RedisSessionManager.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/redis/RedisSessionManager.java">
+      <file leaf-file-name="RedisHttpSession.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/RedisHttpSession.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="12" column="32" lean-forward="true" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
+            <state relative-caret-position="1449">
+              <caret line="77" column="45" lean-forward="true" selection-start-line="77" selection-start-column="45" selection-end-line="77" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1684#1685#0" expanded="true" />
+                <element signature="e#1722#1723#0" expanded="true" />
+                <element signature="e#2839#2840#0" expanded="true" />
+                <element signature="e#2867#2868#0" expanded="true" />
+                <marker date="1506762013755" expanded="true" signature="0:85" ph="..." />
               </folding>
             </state>
           </provider>
@@ -75,12 +80,13 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/RedisSession.java" />
         <option value="$PROJECT_DIR$/src/main/java/sessionIDGenerator/SessionIdGenerator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/RedisSessionFilter.java" />
         <option value="$PROJECT_DIR$/src/main/java/redis/JedisService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/redis/JedisUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/redis/RedisSessionManager.java" />
-        <option value="$PROJECT_DIR$/src/main/java/RedisHttpSession.java" />
         <option value="$PROJECT_DIR$/src/main/java/RedisHttpRequest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/RedisSessionFilter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/redis/RedisSessionManager.java" />
+        <option value="$PROJECT_DIR$/src/main/java/redis/JedisUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/RedisSessionManager.java" />
+        <option value="$PROJECT_DIR$/src/main/java/RedisHttpSession.java" />
       </list>
     </option>
   </component>
@@ -239,7 +245,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.annotationProcessors" />
@@ -248,6 +254,11 @@
     <property name="nodejs_interpreter_path" value="$USER_HOME$/.nvm/versions/node/v6.9.2/bin/node" />
     <property name="js.eslint.eslintPackage" value="" />
     <property name="js-jscs-nodeInterpreter" value="$USER_HOME$/.nvm/versions/node/v6.9.2/bin/node" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -715,12 +726,12 @@
       <updated>1506573511836</updated>
       <workItem from="1506573516542" duration="20087000" />
       <workItem from="1506649564287" duration="7079000" />
-      <workItem from="1506757288563" duration="44000" />
+      <workItem from="1506757288563" duration="2659000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27210000" />
+    <option name="totallyTimeSpent" value="29825000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-4" width="1920" height="1084" extended-state="6" />
@@ -772,7 +783,7 @@
         <state relative-caret-position="253">
           <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding>
-            <marker date="1506652947259" expanded="false" signature="7:231" ph="..." />
+            <marker date="1506652947259" expanded="true" signature="7:231" ph="..." />
             <marker date="1506652947259" expanded="true" signature="233:295" ph="/**...*/" />
             <marker date="1506652947259" expanded="true" signature="649:746" ph="{...}" />
             <marker date="1506652947259" expanded="false" signature="811:822" ph=" { " />
@@ -784,20 +795,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/redis/RedisSessionManager.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/RedisSessionManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="21" column="45" lean-forward="true" selection-start-line="21" selection-start-column="45" selection-end-line="21" selection-end-column="45" />
           <folding>
-            <marker date="1506651006599" expanded="true" signature="23:111" ph="..." />
-            <marker date="1506651006599" expanded="true" signature="113:175" ph="/**...*/" />
-            <marker date="1506651006599" expanded="false" signature="352:362" ph=" { " />
-            <marker date="1506651006599" expanded="false" signature="390:396" ph=" }" />
-            <marker date="1506651006599" expanded="false" signature="456:466" ph=" { " />
-            <marker date="1506651006599" expanded="false" signature="516:522" ph=" }" />
-            <marker date="1506651006599" expanded="false" signature="568:578" ph=" { " />
-            <marker date="1506651006599" expanded="false" signature="644:650" ph=" }" />
-            <marker date="1506651006599" expanded="true" signature="713:817" ph="{...}" />
+            <marker date="1506762013811" expanded="true" signature="7:106" ph="..." />
+            <marker date="1506762013811" expanded="true" signature="108:170" ph="/**...*/" />
+            <marker date="1506762013811" expanded="false" signature="347:357" ph=" { " />
+            <marker date="1506762013811" expanded="false" signature="385:391" ph=" }" />
+            <marker date="1506762013811" expanded="false" signature="451:461" ph=" { " />
+            <marker date="1506762013811" expanded="false" signature="511:517" ph=" }" />
+            <marker date="1506762013811" expanded="false" signature="563:573" ph=" { " />
+            <marker date="1506762013811" expanded="false" signature="639:645" ph=" }" />
+            <marker date="1506762013811" expanded="true" signature="706:879" ph="{...}" />
+            <marker date="1506762013811" expanded="true" signature="924:936" ph=" { " />
+            <marker date="1506762013811" expanded="true" signature="967:973" ph=" }" />
           </folding>
         </state>
       </provider>
@@ -922,102 +935,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/redis/JedisUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="11" column="34" lean-forward="true" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
-          <folding>
-            <marker date="1506651006671" expanded="true" signature="23:201" ph="..." />
-            <marker date="1506651006671" expanded="true" signature="203:265" ph="/**...*/" />
-            <marker date="1506651006671" expanded="false" signature="342:352" ph=" { " />
-            <marker date="1506651006671" expanded="false" signature="401:407" ph=" }" />
-            <marker date="1506651006671" expanded="false" signature="436:446" ph=" { " />
-            <marker date="1506651006671" expanded="false" signature="472:478" ph=" }" />
-            <marker date="1506651006671" expanded="false" signature="521:531" ph=" { " />
-            <marker date="1506651006671" expanded="false" signature="552:558" ph=" }" />
-            <marker date="1506651006671" expanded="true" signature="617:920" ph="{...}" />
-            <marker date="1506651006671" expanded="true" signature="967:1069" ph="{...}" />
-            <marker date="1506651006671" expanded="true" signature="1103:1200" ph="{...}" />
-            <marker date="1506651006671" expanded="true" signature="1235:1370" ph="{...}" />
-            <marker date="1506651006671" expanded="true" signature="1417:1520" ph="{...}" />
-            <marker date="1506651006671" expanded="true" signature="1567:1670" ph="{...}" />
-            <marker date="1506651006671" expanded="true" signature="1725:1874" ph="{...}" />
-            <marker date="1506651006671" expanded="true" signature="1909:2045" ph="{...}" />
-            <marker date="1506651006671" expanded="true" signature="2093:2197" ph="{...}" />
-            <marker date="1506651006671" expanded="true" signature="2250:2394" ph="{...}" />
-            <marker date="1506651006671" expanded="true" signature="2454:2601" ph="{...}" />
-            <marker date="1506651006671" expanded="true" signature="2653:2801" ph="{...}" />
-            <marker date="1506651006671" expanded="true" signature="2866:3016" ph="{...}" />
-            <marker date="1506651006671" expanded="true" signature="3051:3187" ph="{...}" />
-            <marker date="1506651006671" expanded="true" signature="3239:3385" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/RedisSessionFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="16" column="5" lean-forward="true" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
-          <folding>
-            <marker date="1506602297452" expanded="true" signature="7:227" ph="..." />
-            <marker date="1506602297452" expanded="true" signature="229:291" ph="/**...*/" />
-            <marker date="1506602297452" expanded="true" signature="375:385" ph=" { " />
-            <marker date="1506602297452" expanded="true" signature="446:452" ph=" }" />
-            <marker date="1506602297452" expanded="true" signature="526:533" ph="{...}" />
-            <marker date="1506602297452" expanded="true" signature="686:1164" ph="{...}" />
-            <marker date="1506602297452" expanded="true" signature="1192:1200" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/RedisHttpSession.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="27" column="33" lean-forward="true" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="33" />
-          <folding>
-            <marker date="1506652947327" expanded="true" signature="7:178" ph="..." />
-            <marker date="1506652947327" expanded="true" signature="180:242" ph="/**...*/" />
-            <marker date="1506652947327" expanded="true" signature="686:966" ph="{...}" />
-            <marker date="1506652947327" expanded="false" signature="1001:1012" ph=" { " />
-            <marker date="1506652947327" expanded="false" signature="1037:1043" ph=" }" />
-            <marker date="1506652947327" expanded="false" signature="1070:1081" ph=" { " />
-            <marker date="1506652947327" expanded="false" signature="1096:1102" ph=" }" />
-            <marker date="1506652947327" expanded="false" signature="1141:1152" ph=" { " />
-            <marker date="1506652947327" expanded="false" signature="1180:1186" ph=" }" />
-            <marker date="1506652947327" expanded="false" signature="1233:1244" ph=" { " />
-            <marker date="1506652947327" expanded="false" signature="1273:1279" ph=" }" />
-            <marker date="1506652947327" expanded="false" signature="1320:1331" ph=" { " />
-            <marker date="1506652947327" expanded="false" signature="1363:1369" ph=" }" />
-            <marker date="1506652947327" expanded="false" signature="1417:1428" ph=" { " />
-            <marker date="1506652947327" expanded="false" signature="1440:1446" ph=" }" />
-            <marker date="1506652947327" expanded="false" signature="1497:1508" ph=" { " />
-            <marker date="1506652947327" expanded="false" signature="1520:1526" ph=" }" />
-            <marker date="1506652947327" expanded="false" signature="1569:1580" ph=" { " />
-            <marker date="1506652947327" expanded="false" signature="1592:1598" ph=" }" />
-            <marker date="1506652947327" expanded="false" signature="1636:1647" ph=" { " />
-            <marker date="1506652947327" expanded="false" signature="1659:1665" ph=" }" />
-            <marker date="1506652947327" expanded="false" signature="1709:1720" ph=" { " />
-            <marker date="1506652947327" expanded="false" signature="1732:1738" ph=" }" />
-            <marker date="1506652947327" expanded="false" signature="1775:1786" ph=" { " />
-            <marker date="1506652947327" expanded="false" signature="1807:1813" ph=" }" />
-            <marker date="1506652947327" expanded="true" signature="1864:1872" ph="{...}" />
-            <marker date="1506652947327" expanded="true" signature="1919:1927" ph="{...}" />
-            <marker date="1506652947327" expanded="true" signature="1971:1979" ph="{...}" />
-            <marker date="1506652947327" expanded="true" signature="2019:2027" ph="{...}" />
-            <marker date="1506652947327" expanded="true" signature="2058:2066" ph="{...}" />
-            <marker date="1506652947327" expanded="true" signature="2094:2105" ph=" { " />
-            <marker date="1506652947327" expanded="true" signature="2118:2124" ph=" }" />
-            <marker date="1506652947327" expanded="true" signature="2156:2280" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/RedisHttpRequest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        <state relative-caret-position="713">
+          <caret line="35" column="64" lean-forward="false" selection-start-line="35" selection-start-column="48" selection-end-line="35" selection-end-column="64" />
           <folding>
-            <marker date="1506652947259" expanded="false" signature="7:231" ph="..." />
+            <marker date="1506652947259" expanded="true" signature="7:231" ph="..." />
             <marker date="1506652947259" expanded="true" signature="233:295" ph="/**...*/" />
             <marker date="1506652947259" expanded="true" signature="649:746" ph="{...}" />
             <marker date="1506652947259" expanded="false" signature="811:822" ph=" { " />
@@ -1029,23 +952,167 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/redis/RedisSessionManager.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/RedisSessionFilter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="12" column="32" lean-forward="true" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
+        <state relative-caret-position="184">
+          <caret line="12" column="31" lean-forward="true" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
           <folding>
-            <marker date="1506651006599" expanded="true" signature="23:111" ph="..." />
-            <marker date="1506651006599" expanded="true" signature="113:175" ph="/**...*/" />
-            <marker date="1506651006599" expanded="false" signature="352:362" ph=" { " />
-            <marker date="1506651006599" expanded="false" signature="390:396" ph=" }" />
-            <marker date="1506651006599" expanded="false" signature="456:466" ph=" { " />
-            <marker date="1506651006599" expanded="false" signature="516:522" ph=" }" />
-            <marker date="1506651006599" expanded="false" signature="568:578" ph=" { " />
-            <marker date="1506651006599" expanded="false" signature="644:650" ph=" }" />
-            <marker date="1506651006599" expanded="true" signature="713:817" ph="{...}" />
+            <marker date="1506761129135" expanded="true" signature="0:192" ph="..." />
+            <marker date="1506761129135" expanded="false" signature="7:192" ph="..." />
+            <marker date="1506761129135" expanded="true" signature="194:256" ph="/**...*/" />
+            <marker date="1506761129135" expanded="true" signature="340:350" ph=" { " />
+            <marker date="1506761129135" expanded="true" signature="411:417" ph=" }" />
+            <marker date="1506761129135" expanded="true" signature="491:498" ph="{...}" />
+            <marker date="1506761129135" expanded="true" signature="651:1149" ph="{...}" />
+            <marker date="1506761129135" expanded="true" signature="1177:1185" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/redis/JedisUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="718">
+          <caret line="139" column="0" lean-forward="true" selection-start-line="139" selection-start-column="0" selection-end-line="139" selection-end-column="0" />
+          <folding>
+            <marker date="1506762013711" expanded="true" signature="23:201" ph="..." />
+            <marker date="1506762013711" expanded="true" signature="203:265" ph="/**...*/" />
+            <marker date="1506762013711" expanded="false" signature="342:352" ph=" { " />
+            <marker date="1506762013711" expanded="false" signature="401:407" ph=" }" />
+            <marker date="1506762013711" expanded="false" signature="436:446" ph=" { " />
+            <marker date="1506762013711" expanded="false" signature="472:478" ph=" }" />
+            <marker date="1506762013711" expanded="false" signature="521:531" ph=" { " />
+            <marker date="1506762013711" expanded="false" signature="552:558" ph=" }" />
+            <marker date="1506762013711" expanded="true" signature="617:920" ph="{...}" />
+            <marker date="1506762013711" expanded="true" signature="967:1069" ph="{...}" />
+            <marker date="1506762013711" expanded="true" signature="1103:1200" ph="{...}" />
+            <marker date="1506762013711" expanded="true" signature="1235:1370" ph="{...}" />
+            <marker date="1506762013711" expanded="true" signature="1417:1520" ph="{...}" />
+            <marker date="1506762013711" expanded="true" signature="1567:1670" ph="{...}" />
+            <marker date="1506762013711" expanded="true" signature="1725:1874" ph="{...}" />
+            <marker date="1506762013711" expanded="true" signature="1909:2045" ph="{...}" />
+            <marker date="1506762013711" expanded="true" signature="2093:2197" ph="{...}" />
+            <marker date="1506762013711" expanded="true" signature="2250:2394" ph="{...}" />
+            <marker date="1506762013711" expanded="true" signature="2454:2601" ph="{...}" />
+            <marker date="1506762013711" expanded="true" signature="2653:2801" ph="{...}" />
+            <marker date="1506762013711" expanded="true" signature="2866:3016" ph="{...}" />
+            <marker date="1506762013711" expanded="true" signature="3051:3187" ph="{...}" />
+            <marker date="1506762013711" expanded="true" signature="3239:3385" ph="{...}" />
+            <marker date="1506762013711" expanded="true" signature="3431:3527" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/RedisSessionManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="552">
+          <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <folding>
+            <marker date="1506762013811" expanded="true" signature="7:106" ph="..." />
+            <marker date="1506762013811" expanded="true" signature="108:170" ph="/**...*/" />
+            <marker date="1506762013811" expanded="false" signature="347:357" ph=" { " />
+            <marker date="1506762013811" expanded="false" signature="385:391" ph=" }" />
+            <marker date="1506762013811" expanded="false" signature="451:461" ph=" { " />
+            <marker date="1506762013811" expanded="false" signature="511:517" ph=" }" />
+            <marker date="1506762013811" expanded="false" signature="563:573" ph=" { " />
+            <marker date="1506762013811" expanded="false" signature="639:645" ph=" }" />
+            <marker date="1506762013811" expanded="true" signature="706:879" ph="{...}" />
+            <marker date="1506762013811" expanded="true" signature="924:936" ph=" { " />
+            <marker date="1506762013811" expanded="true" signature="967:973" ph=" }" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/RedisHttpSession.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1449">
+          <caret line="77" column="45" lean-forward="true" selection-start-line="77" selection-start-column="45" selection-end-line="77" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1684#1685#0" expanded="true" />
+            <element signature="e#1722#1723#0" expanded="true" />
+            <element signature="e#2839#2840#0" expanded="true" />
+            <element signature="e#2867#2868#0" expanded="true" />
+            <marker date="1506762013755" expanded="true" signature="0:85" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>scala-sdk-2.11.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>redis-session</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: com.alibaba:fastjson:1.2.13</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>

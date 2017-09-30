@@ -140,4 +140,10 @@ public class JedisUtil {
 
         return result;
     }
+
+    public void deletePhysically(String key){
+        Jedis jedis = pool.getResource();
+        jedis.del(key);
+        jedis.close();
+    }
 }

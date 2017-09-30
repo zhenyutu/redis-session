@@ -1,5 +1,3 @@
-import redis.RedisSessionManager;
-
 import javax.security.auth.login.Configuration;
 import javax.servlet.*;
 import javax.servlet.http.HttpServletRequest;
@@ -25,7 +23,7 @@ public class RedisSessionFilter implements Filter{
         else {
             HttpServletRequest httpServletRequest = (HttpServletRequest)servletRequest;
             HttpServletResponse httpServletResponse = (HttpServletResponse)servletResponse;
-            RedisHttpRequest request = new RedisHttpRequest(httpServletRequest);
+            RedisHttpRequest request = new RedisHttpRequest(httpServletRequest,httpServletResponse);
             filterChain.doFilter(request,httpServletResponse);
         }
     }

@@ -1,10 +1,6 @@
-import redis.RedisSessionManager;
-
 import javax.servlet.http.*;
 import javax.servlet.ServletContext;
-import java.util.Enumeration;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 /**
  * Created by tuzhenyu on 17-9-28.
@@ -18,6 +14,8 @@ public class RedisHttpSession implements HttpSession{
     private long creationTime;
     private long lastAccessdTime;
     private int maxInactiveInterval;
+
+    private volatile boolean invalid;
 
     private RedisSessionManager manager;
     private Map<String,Object> attribute;
@@ -64,44 +62,58 @@ public class RedisHttpSession implements HttpSession{
 
 
     public Object getAttribute(String s) {
-        return null;
+        if (!invalid)
+            throw new IllegalStateException("session is invalid");
+        return attribute.get(s);
     }
 
     public Object getValue(String s) {
-        return null;
+        return getAttribute(s);
     }
 
     public Enumeration getAttributeNames() {
-        return null;
+        if (!invalid)
+            throw new IllegalStateException("session is invalid");
+        Set<String> keys = attribute.keySet();
+        return Collections.enumeration(keys);
     }
 
     public String[] getValueNames() {
-        return new String[0];
+        if (!invalid)
+            throw new IllegalStateException("session is invalid");
+        Set<String> keys = attribute.keySet();
+        return keys.toArray(new String[0]);
     }
 
-    public void setAttribute(String s, Object o) {
-
+    public void setAttribute(String s, Object o) throws IllegalStateException{
+        if (!invalid)
+            throw new IllegalStateException("session is invalid");
+        attribute.put(s,o);
     }
 
     public void putValue(String s, Object o) {
-
+        setAttribute(s,o);
     }
 
     public void removeAttribute(String s) {
-
+        if (!invalid)
+            throw new IllegalStateException("session is invalid");
+        attribute.remove(s);
     }
 
     public void removeValue(String s) {
-
+        removeAttribute(s);
     }
 
     public void invalidate() {
-
+        invalid  =true;
+        manager.deletePhysically(id);
     }
 
     public boolean isNew() {
         return false;
     }
+
 
     private void writeCookie(){
         String id = getId();
